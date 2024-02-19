@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.14,
         shadowRadius: 8,
         shedowOffset: { 
-            width: 0, 
+            width: 0,
             height: 4 
         }
     },
