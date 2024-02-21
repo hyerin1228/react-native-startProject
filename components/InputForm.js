@@ -1,7 +1,10 @@
 import { Platform, View, Text, KeyboardAvoidingView, Pressable, StyleSheet, TextInput } from 'react-native'
-import React from 'react'
+import React, { useState } from 'react'
 
 const InputForm = () => {
+
+  const [currentValue, setCurrentValue] = useState("");
+
   return (
     <KeyboardAvoidingView
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
@@ -9,6 +12,8 @@ const InputForm = () => {
       <TextInput 
         style={styles.InputField}
         placeholder='할 일을 입력해주세요.'
+        onChangeText={setCurrentValue}
+        value={currentValue}
       />
       <Pressable style={styles.addButton}>
         <Text style={styles.addButtonText}>+</Text>
